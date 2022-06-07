@@ -1,0 +1,40 @@
+{
+    "buildOptions": {
+        "verbose": true,
+    },
+    "compilerOptions": {
+        "target": "ES2015",
+        "module": "ESNext",
+        // "sourceMap": true,
+        "declaration": true,
+        "outDir": "./dist/",
+        "rootDir": "./src",
+        "strict": true,
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "strictNullChecks": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noFallthroughCasesInSwitch": true,
+        "noEmitOnError": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "removeComments": false,
+        "moduleResolution": "node",
+        "lib": [
+            "es2015",
+            "dom"
+        ],
+        "types": [
+            "node",
+            "@types/jest"
+        ],
+        "baseUrl": "./src",
+        "paths": {
+            "*": [
+                "./src/*"
+            ]
+        }
+    },
+}

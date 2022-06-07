@@ -1,0 +1,38 @@
+{
+    "buildOptions": {
+        "verbose": true
+    },
+    "compilerOptions": {
+        "target": "es5",
+        "module": "ESNext",
+        "sourceMap": false,
+        "declaration": true,
+        "rootDir": "./src",
+        "strict": false,
+        "noImplicitAny": false,
+        "noImplicitReturns": false,
+        "noImplicitThis": false,
+        "esModuleInterop": true,
+        "strictNullChecks": false,
+        "noUnusedLocals": false,
+        "noUnusedParameters": false,
+        "noFallthroughCasesInSwitch": false,
+        "noEmitOnError": false,
+        "experimentalDecorators": false,
+        "emitDecoratorMetadata": false,
+        "removeComments": false,
+        "lib": [
+            "es2015",
+            "dom"
+        ],
+        "types": [
+            "node"
+        ],
+        "baseUrl": "./src",
+        "paths": {
+            "*": [
+                "./src/*"
+            ]
+        }
+    }
+}
