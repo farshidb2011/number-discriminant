@@ -2,7 +2,7 @@
   "name": "partridge",
   "version": "0.0.3",
   "description": "number separator with character",
-  "main": "dist/cjs/partridge.cjs.js",
+  "main": "dist/partridge.cjs.js",
   "browser": "dist/partridge.browser.min.js",
   "module": "dist/partridge.esm.js",
   "types": "dist/types/index.d.ts",
