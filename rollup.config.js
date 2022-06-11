@@ -25,6 +25,7 @@ export default [
 			{
 				file: 'dist/partridge.cjs.js',
 				format: 'cjs',
+				exports: 'auto'
 			},
 			{
 				file: 'dist/partridge.esm.js',
