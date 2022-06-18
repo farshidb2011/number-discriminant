@@ -1,13 +1,7 @@
-import {
-    addDiscriminator,
-    removeDiscriminator,
-    InputError
-} from './functions/number-discriminator';
+const NumberDiscriminator = require('./functions/number-discriminator');
 
-export default {
-    addDiscriminator,
-    removeDiscriminator,
-    InputError
+export  {
+    NumberDiscriminator
 }
 
 export type { NumType } from './functions/number-discriminator';
