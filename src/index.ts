@@ -1,7 +1,3 @@
-const NumberDiscriminator = require('./functions/number-discriminator');
-
-export  {
-    NumberDiscriminator
-}
+export * as NumberDiscriminator from './functions/number-discriminator';
 
 export type { NumType } from './functions/number-discriminator';
