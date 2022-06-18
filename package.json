@@ -1,11 +1,11 @@
 {
   "name": "partridge",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "number separator with character",
   "main": "dist/partridge.cjs.js",
-  "browser": "dist/partridge.browser.min.js",
   "module": "dist/partridge.esm.js",
   "types": "dist/types/index.d.ts",
+  "browser": "dist/partridge.browser.min.js",
   "files": [
     "dist"
   ],

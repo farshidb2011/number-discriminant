@@ -10,7 +10,7 @@ export class InputError extends Error {
     }
 }
 
-export function addDiscriminator(num: NumType, char = ",") {
+export function add(num: NumType, char = ",") {
 
     char = char || "";
     num = num || 0;
@@ -30,7 +30,7 @@ export function addDiscriminator(num: NumType, char = ",") {
     return !arr[1] ? format(arr[0]) : format(arr[0]) + '.' + arr[1];
 }
 
-export function removeDiscriminator(num: string, char = ",") {
+export function remove(num: string, char = ",") {
     char = char || ",";
     num = num || '0';
 
