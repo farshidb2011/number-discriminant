@@ -38,7 +38,7 @@ export function remove(num: string, char = ",") {
         throw new InputError();
     }
 
-    const regex = new RegExp(char,'g');
+    const regex = new RegExp(`\\${char}`,'g');
 
     return num.replace(regex, '');
 }

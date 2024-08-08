@@ -28,17 +28,34 @@ describe('Add Discriminator', () => {
 
 });
 
-
 describe('Remove Discriminator', () => {
-    test('should return a string without comma', () => {
-        expect(NumberDiscriminator.remove('123,456,789')).toBe('123456789');
-    });
+    test('should remove custom separator', () => {
+        expect(NumberDiscriminator.remove('123/456/789', '/')).toBe('123456789')
+    })
 
-    test('should be pass with string pass', () => {
-        expect(NumberDiscriminator.remove('9,876,543')).toBe('9876543');
-    });
+    test('should handle number with no separators', () => {
+        expect(NumberDiscriminator.remove('123456789')).toBe('123456789')
+    })
 
-    test('should be return error if parm not number', () => {
-        expect(() => NumberDiscriminator.remove('a')).toBe('a');
-    });
-});
+    test('should handle empty string with default separator', () => {
+        expect(NumberDiscriminator.remove('')).toBe('0')
+    })
+
+    test('should handle empty string with custom separator', () => {
+        expect(NumberDiscriminator.remove('', '/')).toBe('0')
+    })
+
+    test('should throw InputError for non-string input', () => {
+        expect(()=>{
+            NumberDiscriminator.remove(123456789 as any)
+        }).toThrow(new NumberDiscriminator.InputError());
+    })
+
+    test('should remove multiple occurrences of custom separator', () => {
+        expect(NumberDiscriminator.remove('1--2--3--4--5', '--')).toBe('12345')
+    })
+
+    test('should handle string with mixed separators', () => {
+        expect(NumberDiscriminator.remove('1,2.3,4.5', '.')).toBe('1,23,45')
+    })
+})
